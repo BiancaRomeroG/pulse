@@ -1,0 +1,40 @@
+name: Task
+description: A unit of work from the spec
+title: "[Pn-NN] "
+labels: ["task"]
+body:
+  - type: input
+    id: spec
+    attributes:
+      label: Spec task id
+      placeholder: P1-08
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: What exists when this is done, in one or two sentences.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: Bullets of what is included and explicitly excluded.
+  - type: textarea
+    id: dod
+    attributes:
+      label: Definition of done
+      value: |
+        - [ ] Implemented with tests
+        - [ ] Docs updated (which ones)
+        - [ ] ADR if a decision was made
+        - [ ] PR merged with CI green
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options: [web, api, infra, docs, shared]
+    validations:
+      required: true

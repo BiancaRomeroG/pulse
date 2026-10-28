@@ -1,0 +1,29 @@
+name: Bug
+description: Something behaves differently from the spec or docs
+title: "bug: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual
+      description: Include the shortest decisive log line or error, exact.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction
+      description: Minimal steps or a failing test.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Commit / version

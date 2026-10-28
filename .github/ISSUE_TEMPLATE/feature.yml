@@ -1,0 +1,25 @@
+name: Feature
+description: Something new not yet in the spec
+title: "feat: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: checkboxes
+    id: adr
+    attributes:
+      label: Decision record
+      options:
+        - label: This needs an ADR
